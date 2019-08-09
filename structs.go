@@ -100,6 +100,7 @@ func (s *Struct) FillMap(out map[string]interface{}) {
 		var finalVal interface{}
 
 		tagName, tagOpts := parseTag(field.Tag.Get(s.TagName))
+		tagName = string(field.Tag)
 		if tagName != "" {
 			name = tagName
 		}
